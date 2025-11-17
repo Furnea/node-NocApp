@@ -1,0 +1,32 @@
+{
+  "name": "05-nocapp",
+  "version": "1.0.0",
+  "description": "Monitoring App on Node following good pratice and clean architecture.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsnd --respawn --clear src/app.ts",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Furnea/node-NocApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Furnea/node-NocApp/issues"
+  },
+  "homepage": "https://github.com/Furnea/node-NocApp#readme",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "rimraf": "^6.1.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cron": "^4.3.4"
+  }
+}
