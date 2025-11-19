@@ -40,27 +40,8 @@ export class EmailService {
                 html: htmlBody,
                 attachments : attachments,
             })
-            console.log('Email sent: ', sentInfo);
-            const log = new LogEntity ({
-                level: LogSeverityLevel.low,
-                message: `Email sent: ${sentInfo}`,
-                origin: 'email-service.ts'
-            });
-
             return true;
         } catch (error) {
-                const sentInfo = await this.transporter.sendMail({
-                to: to,
-                subject: subject,
-                html: htmlBody,
-                attachments : attachments,
-            })
-            console.log('Email sent: ', sentInfo);
-            const log = new LogEntity ({
-                level: LogSeverityLevel.low,
-                message: `Error ${error}`,
-                origin: 'email-service.ts'
-            });
             return false;
         }
     }
