@@ -1,5 +1,13 @@
+import { SeverityLevel } from "@prisma/client";
+import { PostgresLogDatasource } from "../../infrastructure/datasources/postgres-log.datasource";
 
 export enum LogSeverityLevel {
+    low = 'low',
+    medium = 'medium',
+    high = 'high' 
+}
+
+export enum LogSeverityLevelPostgres {
     low = 'low',
     medium = 'medium',
     high = 'high' 
@@ -44,4 +52,5 @@ export class LogEntity {
         });
         return log;
     }
+
 }
